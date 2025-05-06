@@ -402,7 +402,7 @@ elif analysis_mode == "Analyze Opponent":
         st.dataframe(
             opponent_df_display.style
             .format("{:.2f}", subset=[col for col in display_cols_opponent if 'per90' in col]) # Format per 90 columns
-            # .background_gradient(cmap='Greens', subset=[threat_metric], low=0.1) # Apply green gradient to threat metric column
+            .background_gradient(cmap='Greens', subset=[threat_metric], low=0.1) # Apply green gradient to threat metric column
             , use_container_width=True
         )
         # Add explanatory text for the table
